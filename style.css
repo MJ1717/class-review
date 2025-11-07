@@ -9,6 +9,24 @@ body {
   font-family: Arial, sans-serif;
 }
 
+
+.section {
+  border: 2px solid rgb(152, 152, 152);
+  padding: 15px;
+  margin: 25px auto;
+  width: 85%;
+  border-radius: 30px;
+  border-width: 5px;
+  margin-bottom: 50px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
 .container {
   display: block;
   background-color: white;
