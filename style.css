@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+body {
+  background-color: #f0f0f0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: block;
+  background-color: white;
+  border: 2px solid #0078d7;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 20px auto;
+  width: 200px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #0078d7;
+  text-decoration: none; /* removes underline */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+.container:hover {
+  background-color: #0078d7;
+  color: white;
+  cursor: pointer;
+}
+
+
+.content-box {
+  font-family: 'Gowun Dodum', sans-serif;
+  background-color: #f9f9f9;
+  border: 2px solid #0078d7;
+  border-radius: 10px;
+  padding: 20px;
+  width: 1000px;
+  margin: 40px auto;
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+  text-align: left;
+}
+
+
+.instructor-name {
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  color: #2231ff; 
+}
+
+.instructor-desc {
+  font-weight: normal;
+  font-size: 17px;
+  color: #333;
+  line-height: 1.6; 
+  word-break: keep-all; 
+}
+
+
+.instructor-rate {
+  font-weight: bold;
+  color: #ff3b3b; 
+  font-size: 18px;
+  text-align: right; 
+  margin-top: 20px;
+}
