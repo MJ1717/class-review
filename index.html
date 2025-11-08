@@ -1,99 +1,29 @@
 <!DOCTYPE html>
 <html>
-
-
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>McGill JirongE</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Hide content initially if we're restoring scroll position */
+      body.restoring-scroll {
+        visibility: hidden;
+      }
+    </style>
+    <script>
+      // Check if we need to restore scroll position
+      if (sessionStorage.getItem('indexScrollPos')) {
+        document.documentElement.classList.add('restoring-scroll');
+      }
+    </script>
   </head>
 
-
-
   <body>
-
     <h1>JirongE</h1>
 
-
-    
-    <!-- comp classes -->
-    <div class="section">
-      <div class="course-grid">
-        <a href="/classes/comp/comp202.html" class="container">COMP202</a>
-        <a href="/classes/comp/comp206.html" class="container">COMP206</a>
-        <a href="/classes/comp/comp250.html" class="container">COMP250</a>
-        <a href="/classes/comp/comp251.html" class="container">COMP251</a>
-        <a href="/classes/comp/comp273.html" class="container">COMP273</a>
-        <a href="/classes/comp/comp302.html" class="container">COMP302</a>
-      </div>
-    </div>
-
-
-    <!-- math classes -->
-    <div class="section">
-      <div class="course-grid">
-        <a href="/classes/math/math203.html" class="container">MATH203</a>
-        <a href="/classes/math/math223.html" class="container">MATH223</a>
-        <a href="/classes/math/math240.html" class="container">MATH240</a>
-        <a href="/classes/math/math318.html" class="container">MATH318</a>
-        <a href="/classes/math/math323.html" class="container">MATH323</a>
-      </div>
-    </div>
-
-
-    <!-- chem classes -->
-    <div class="section">
-      <div class="course-grid">
-        <a href="/classes/chem/chem181.html" class="container">CHEM181</a>
-      </div>
-    </div>
-
-
-    <!-- psyc classes -->
-     <div class="section">
-      <div class="course-grid">
-        <a href="/classes/psyc/psyc211.html" class="container">PSYC211</a>
-        <a href="/classes/psyc/psyc305.html" class="container">PSYC305</a>
-        <a href="/classes/psyc/psyc332.html" class="container">PSYC332</a>
-        <a href="/classes/psyc/psyc471.html" class="container">PSYC471</a>
-      </div>
-    </div>
-
-
-
-
-    <!-- econ classes -->
-     <div class="section">
-      <div class="course-grid">
-        <a href="/classes/econ/econ209.html" class="container">ECON209</a>
-        <a href="/classes/econ/econ308.html" class="container">ECON308</a>
-    
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- Courses will be dynamically loaded here -->
+    <div id="courses-container"></div>
 
     <div style="
         position: fixed;
@@ -113,21 +43,57 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
 
+    <script>
+        // Load and display all courses
+        fetch('/data/reviews.json')
+            .then(response => response.json())
+            .then(reviews => {
+                // Group by department
+                const departments = {};
+                reviews.forEach(review => {
+                    if (!departments[review.department]) {
+                        departments[review.department] = [];
+                    }
+                    departments[review.department].push(review);
+                });
 
+                // Create HTML for each department
+                const container = document.getElementById('courses-container');
+                Object.keys(departments).sort().forEach(dept => {
+                    const section = document.createElement('div');
+                    section.className = 'section';
+                    
+                    const grid = document.createElement('div');
+                    grid.className = 'course-grid';
+                    
+                    departments[dept].sort((a, b) => a.courseCode.localeCompare(b.courseCode)).forEach(course => {
+                        const link = document.createElement('a');
+                        link.href = `/course-template.html?code=${course.courseCode}`;
+                        link.className = 'container';
+                        link.textContent = course.courseCode;
+                        
+                        // Save scroll position before navigating
+                        link.addEventListener('click', () => {
+                            sessionStorage.setItem('indexScrollPos', window.scrollY);
+                        });
+                        
+                        grid.appendChild(link);
+                    });
+                    
+                    section.appendChild(grid);
+                    container.appendChild(section);
+                });
 
-
-
-
-
-
-
-
-
-
-    <script src="script.js"></script>
+                // Restore scroll position AFTER content is loaded
+                const savedScrollPos = sessionStorage.getItem('indexScrollPos');
+                if (savedScrollPos) {
+                    // Restore scroll immediately, then show content
+                    window.scrollTo(0, parseInt(savedScrollPos));
+                    document.documentElement.classList.remove('restoring-scroll');
+                    sessionStorage.removeItem('indexScrollPos');
+                }
+            })
+            .catch(error => console.error('Error loading courses:', error));
+    </script>
   </body>
-
-
-
-
 </html>
