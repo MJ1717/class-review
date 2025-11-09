@@ -264,5 +264,33 @@
     "professor": "Giulia Alberini",
     "review": "괜찮은거 같음. 251 줄리아랑 들으면 안좋다는 말을 많이 들어서 쫄았었는데 나쁘지 않음. 배우는 내용들이 정말유용한 내용들인거 같음. data structures 에 대해서 배우고 running time 에 대해서 배우는데 나중에 정말 도움이 될만한 내용들인거 같음. 어싸는 어렵지 않고 시험들도 어렵진 않았지만 이상하게 평균이 낮게 나옴.",
     "rating": 4
+  },
+  {
+    "courseCode": "MGCR211",
+    "department": "MGCR",
+    "professor": "Dongyoung Lee",
+    "review": "교수님 최고. 잘 가르치고, 웃기고, 착함. 숙제는 없고 (그냥 과제 하나 있음). 출석체크 안함. 미드텀 너무 길고 읽을게 많음 (요즘은 좀 더 쉽다고 들음). 쌤 강의 잘 듣고 꾸준히 공부하면 잘 할 수 있음 (B+, A-, A 가능). office hours도 많음.",
+    "rating": 5
+  },
+  {
+    "courseCode": "MGCR293",
+    "department": "MGCR",
+    "professor": "Taweewan Sidthidet",
+    "review": "MGCR 중에서 제일 쉬운 과목중 하나. 꼭 A 받아야함. 미드텀이랑 파이널은 전부 multiple choice. 쌤 착한데 발음을 잘 못 알아듣겠음 (동양인인듯?). 수업 안가고 혼자 공부해도됨 (그래도 쉬움). 출석체크 안함.",
+    "rating": 5
+  },
+  {
+    "courseCode": "MGCR233",
+    "department": "MGCR",
+    "professor": "Taha Havakhor",
+    "review": "코딩 수업 (python). 교수님 착함. 진도는 좀 빠름. 발음이 약간 인도 억양이 있는데 괜찮음. 출석체크 함. in-class coding exercise로 participation 점수 있음. 시험은 전반적으로 쉬움. 코딩 못 해도 연습 많이 하면됨. A-, A 가능함.",
+    "rating": 4
+  },
+  {
+    "courseCode": "ECON230",
+    "department": "ECON",
+    "professor": "Hassan Benchekroun",
+    "review": "출석체크 안하고 시험은 공부하면 쉬워염. 수학 잘하고 경제 잘하면 할만해여. 쌤이 살짝 깐깐해여 그래서 관심 없으면 elective로는 비추천.",
+    "rating": 4
   }
 ]
