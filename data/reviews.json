@@ -292,5 +292,33 @@
     "professor": "Hassan Benchekroun",
     "review": "출석체크 안하고 시험은 공부하면 쉬워염. 수학 잘하고 경제 잘하면 할만해여. 쌤이 살짝 깐깐해여 그래서 관심 없으면 elective로는 비추천.",
     "rating": 4
+  },
+  {
+    "courseCode": "ECON227",
+    "department": "ECON",
+    "professor": "John Galbraith",
+    "review": "출첵없고 교수님 착해요. 시험은 통계 잘하면 충분히 할만해여. 확률 통계 잘하면 쉬운 수업! 추천",
+    "rating": 5
+  },
+  {
+    "courseCode": "MGCR331",
+    "department": "MGCR",
+    "professor": "Matthew Goodman",
+    "review": "1부는 Excel, 2부는 코딩(HTML, CSS). 교수님 착함. 출석체크 함 (for participation points). 매 수업 전에 30분짜리 온라인 강의를 봐야 함. 시험은 괜찮음.",
+    "rating": 4
+  },
+  {
+    "courseCode": "MGCR271",
+    "department": "MGCR",
+    "professor": "Setareh Farajollahzadeh",
+    "review": "교수님 착함. 수업은 별로 재미없음. 출석체크 안함. 미드텀은 어려움, 파이널은 괜찮음. 공부할 때 도움이 많이 되는 것: PPT, 연습 문제, 지난 미드텀과 파이널. 통계 공식들을 많이 이해해야 하지만, 미드텀과 파이널에 crib sheet 사용할 수 있음.",
+    "rating": 4
+  },
+  {
+    "courseCode": "MGCR294",
+    "department": "MGCR",
+    "professor": "Anisha Ghosh & Patrick Augustin",
+    "review": "교수님들 착함. 출석체크 안함. 미드텀까지는 괜찮음, 파이널은 어려움 (망함). 알아야 할 수업 내용이 많아서 좀 헷갈림 (interest rates, inflation, ...).",
+    "rating": 3
   }
 ]
