@@ -320,5 +320,12 @@
     "professor": "Anisha Ghosh & Patrick Augustin",
     "review": "교수님들 착함. 출석체크 안함. 미드텀까지는 괜찮음, 파이널은 어려움 (망함). 알아야 할 수업 내용이 많아서 좀 헷갈림 (interest rates, inflation, ...).",
     "rating": 3
+  },
+  {
+    "courseCode": "COMP202",
+    "department": "COMP",
+    "professor": "Faten M'hiri",
+    "review": "일렉티브로 그냥 들었는데 나름 괜찮음. 근데 코딩이 안 맞으면 비추천. 친구들중 코딩 안맞아서 힘들다는 친구들 꽤 있었음",
+    "rating": 4
   }
 ]
