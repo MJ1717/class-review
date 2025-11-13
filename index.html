@@ -48,13 +48,21 @@
         fetch('/data/reviews.json')
             .then(response => response.json())
             .then(reviews => {
-                // Group by department
+                // Group by department and get unique courses
                 const departments = {};
+                const uniqueCourses = new Set();
+                
                 reviews.forEach(review => {
                     if (!departments[review.department]) {
                         departments[review.department] = [];
                     }
-                    departments[review.department].push(review);
+                    
+                    // Only add course if we haven't seen it before
+                    const courseKey = `${review.department}-${review.courseCode}`;
+                    if (!uniqueCourses.has(courseKey)) {
+                        uniqueCourses.add(courseKey);
+                        departments[review.department].push(review);
+                    }
                 });
 
                 // Create HTML for each department
